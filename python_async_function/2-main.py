@@ -1,14 +1,8 @@
 #!/usr/bin/env python3
 
-import asyncio
+measure_time = __import__('2-measure_runtime').measure_time
 
+n = 5
+max_delay = 9
 
-measure_runtime = __import__('2-measure_runtime').measure_runtime
-
-
-async def main():
-    return await(measure_runtime())
-
-print(
-    asyncio.run(main())
-)
+print(measure_time(n, max_delay))
